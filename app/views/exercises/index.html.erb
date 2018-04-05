@@ -1,7 +1,8 @@
 <p id="notice"><%= notice %></p>
-
+<head>
 <h1>Exercises</h1>
-
+</head>
+<body>
 <table>
   <thead>
     <tr>
@@ -12,7 +13,7 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody id="tableBody">
     <% @exercises.each do |exercise| %>
       <tr>
         <td><%= exercise.name %></td>
@@ -27,5 +28,10 @@
 </table>
 
 <br>
-
 <%= link_to 'New Exercise', new_exercise_path %>
+</body>
+<style>
+body {
+   background-color: lightgrey;
+}
+</style>

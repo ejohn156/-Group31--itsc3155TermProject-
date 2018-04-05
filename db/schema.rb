@@ -20,12 +20,4 @@ ActiveRecord::Schema.define(version: 20180404154453) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "images", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
-    t.string "image"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
 end

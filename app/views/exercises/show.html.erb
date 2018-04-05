@@ -1,19 +1,30 @@
 <p id="notice"><%= notice %></p>
-
-<p>
+<h1>
+  <%= @exercise.name %>
+</h1>
+<body>
+  <div id="form">
+<p class="showInfo">
   <strong>Name:</strong>
   <%= @exercise.name %>
 </p>
 
-<p>
+<p class="showInfo">
   <strong>Description:</strong>
   <%= @exercise.description %>
 </p>
 
-<p>
+<p class="showInfo">
   <strong>Image:</strong>
-  <%= image_tag @exercise.image.thumb.url %>
+  <%= image_tag @exercise.image.thumb.url, style: 'height:100%;width:auto;' %>
 </p>
 
 <%= link_to 'Edit', edit_exercise_path(@exercise) %> |
 <%= link_to 'Back', exercises_path %>
+</div>
+</body>
+<style>
+body {
+   background-color: lightgrey;
+}
+</style>
