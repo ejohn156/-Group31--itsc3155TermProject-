@@ -1,3 +1,56 @@
-// Place all the styles related to the Exercises controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+h1 
+{
+    text-align: center;
+    font: bold 70px Georgia, serif;
+    color: darkgreen;
+    
+}
+table 
+{
+    text-align: center;
+    border-collapse: collapse;
+    background-color: lightgreen;
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid black;
+    font: 25px Georgia, serif;
+}
+
+th {
+    background-color: darkgreen;
+    color: #fafad2;
+    height: 50px;
+}
+
+tbody{
+    background-color: #fafad2;
+    color: darkgreen;
+}
+#des {
+    color: darkgreen;
+    font-size: 20px;
+    text-align: center;
+}
+
+#form {
+    color: darkgreen;
+    font-size: 30px;
+}
+#link{
+    color: white;
+}
+
+strong{
+    font-size: 30px;
+    color: darkgreen;
+}
+
+.showInfo{
+    color: black;
+    font-size: 20px;
+}
+#welcomeLinks{
+    text-align: center;
+}
