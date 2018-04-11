@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'progress/index'
+  resources :progress
   resources :exercises
   get 'welcome/index'
   

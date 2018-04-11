@@ -67,16 +67,32 @@ ul{
 li {
     float: left;
 }
+
 li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 12px 15px;
     text-decoration: none;
+    margin-left: 15px;
+    font-size: 20px;
 }
 li a:hover {
     background-color: darkgreen;
 
+}
+
+#logo {
+    font-size: 30px;
+    margin-left: 15px;
+    color: darkgreen;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+
+}
+#rt {
+    float: right;
 }
 
 
