@@ -8,7 +8,9 @@
   <div id="form">
   <p>
   <strong>Image:</strong>
-  <%= image_tag @exercise.image.thumb.url %>
+  <% if @exercise.image? %>
+    <%= image_tag @exercise.image.thumb.url %>
+  <% end %>
 </p>
 <p class="showInfo">
   <strong>Name:</strong>
