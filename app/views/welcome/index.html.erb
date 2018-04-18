@@ -1,5 +1,9 @@
 <header>
-<h1>Hello, Workout App User!</h1>
+<% if current_user %>
+    <h1>Hello, <%= current_user.firstname%> <%= current_user.lastname%>!</h1>
+<%else%>
+    <h1>Hello, Workout App User!</h1>
+<% end %>
 </header>
 <body>
     <p id="des">This page will contain the latest progress update(or the current profile status) along with an option to update sed profile.</p>
