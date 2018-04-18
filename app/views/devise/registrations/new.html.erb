@@ -4,21 +4,48 @@
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    Username:
+    <%= f.text_field :username, placeholder: "Username"  %>
+  </div>
+  
+  <div class="field">
+    First Name:
+    <%= f.text_field :firstname, placeholder: "First Name"  %>
+  </div>
+  
+  <div class="field">
+    Last Name:
+    <%= f.text_field :lastname, placeholder: "Last Name"  %>
+  </div>
+  
+  <div class="field">
+    Height:
+    <%= f.text_field :height_feet  %>ft
+    <%= f.text_field :height_inches  %>in
+  </div>
+  
+  <div class="field">
+    Weight:
+    <%= f.text_field :weight  %>lbs
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    Email:
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "example@uncc.edu" %>
+  </div>
+
+  <div class="field">
+    Password:
+    <%= f.password_field :password, autocomplete: "off", placeholder: "******" %>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+      <br />
+      <em><%= @minimum_password_length %> characters minimum (leave blank if you don't want to change it)</em>
+    <% end %> 
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    Confirm Password:
+    <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "******" %>
   </div>
 
   <div class="actions">
