@@ -3,4 +3,7 @@ class ProgressController < ApplicationController
   end
   def new
   end
+  def create
+    render plain: params[:progress].inspect
+  end
 end

@@ -40,3 +40,11 @@ feature "Functional navigation bar" do
     
 end
 
+feature "be able to navigate to an update progress form" do
+    scenario "be able to navigate to an update progress form from the progress page" do
+    visit progress_index_path
+    expect(page).to have_content("Progress")
+    click_link "Update Progress"
+    expect(page).to have_content("New Progress Update")
+end
+end
