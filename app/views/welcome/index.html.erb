@@ -1,11 +1,29 @@
-<header>
+
 <% if current_user %>
+    <header>
     <h1>Hello, <%= current_user.firstname%> <%= current_user.lastname%>!</h1>
+    </header>
+    
+    <body>
+    <p id="des">
+    Current Weight:
+    <%= current_user.weight%> <br />
+    Current Height:
+    <%= current_user.height_feet%> ft 
+    <%= current_user.height_inches%> in<br />
+    Current BMI:
+    <%= "%.2f" % ((703 * current_user.weight) / ((current_user.height_feet * 12.0 + current_user.height_inches) * (current_user.height_feet * 12.0 + current_user.height_inches)))%> <br />
+    
+    </p>
+    </body>
 <%else%>
+    <header>
     <h1>Hello, Workout App User!</h1>
+    </header>
+    
+    <body>
+    <p id="des">Please Sign In to get additional information.</p>
+    </body>
 <% end %>
-</header>
-<body>
-    <p id="des">This page will contain the latest progress update(or the current profile status) along with an option to update sed profile.</p>
-</body>
+
 <style>
