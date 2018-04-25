@@ -1,4 +1,5 @@
 <body>
+  
 <%= form_for @exercise, html: { multipart: true } do |f| %>
   <% if @exercise.errors.any? %>
     <div id="error_explanation">
@@ -19,6 +20,12 @@
       <%= image_tag f.object.image.thumb.url %>
     <% end %>
   </div>
+  
+  <div class="field">
+    <%= f.label :created_by %><br>
+    <%= f.text_field :created_by, :value => current_user.username, :readonly => true %>
+  </div>
+  
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
