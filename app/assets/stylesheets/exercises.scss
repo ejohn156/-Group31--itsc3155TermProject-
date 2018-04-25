@@ -1,7 +1,7 @@
 h1 
 {
     text-align: center;
-    font: bold 70px Georgia, serif;
+    font: bold 4.375em Georgia, serif;
     color: darkgreen;
     
 }
@@ -14,14 +14,14 @@ table
 }
 
 table, th, td {
-    border: 1px solid black;
-    font: 25px Georgia, serif;
+    border: 0.0625em solid black;
+    font: 1.5625em Georgia, serif;
 }
 
 th {
     background-color: darkgreen;
     color: #fafad2;
-    height: 50px;
+    height: 3.125em;
 }
 
 tbody{
@@ -30,26 +30,26 @@ tbody{
 }
 #des {
     color: darkgreen;
-    font-size: 20px;
+    font-size: 1.25em;
     text-align: center;
 }
 
 #form {
     color: darkgreen;
-    font-size: 30px;
+    font-size: 1.875em;
 }
 #link{
     color: white;
 }
 
 strong{
-    font-size: 30px;
+    font-size: 1.875em;
     color: darkgreen;
 }
 
 .showInfo{
     color: black;
-    font-size: 20px;
+    font-size: 1.25em;
 }
 #welcomeLinks{
     text-align: center;
@@ -72,10 +72,10 @@ li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 12px 15px;
+    padding: 0.75em 0.9375em;
     text-decoration: none;
-    margin-left: 15px;
-    font-size: 20px;
+    margin-left: 0.9375em;
+    font-size: 1.25em;
 }
 li a:hover {
     background-color: darkgreen;
@@ -83,8 +83,8 @@ li a:hover {
 }
 
 #logo {
-    font-size: 30px;
-    margin-left: 15px;
+    font-size: 1.875em;
+    margin-left: 0.9375em;
     color: darkgreen;
     display: block;
     text-align: center;
