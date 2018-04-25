@@ -1,22 +1,22 @@
 body {
   background-color: #fff;
   color: #333;
-  margin: 33px;
+  margin: 2.0625em;
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.8125em;
+  line-height: 1.125em;
 }
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.8125em;
+  line-height: 1.125em;
 }
 
 pre {
   background-color: #eee;
-  padding: 10px;
-  font-size: 11px;
+  padding: 0.625em;
+  font-size: 0.6875em;
 }
 
 a {
@@ -33,16 +33,16 @@ a {
 }
 
 th {
-  padding-bottom: 5px;
+  padding-bottom: 0.3125em;
 }
 
 td {
-  padding: 0 5px 7px;
+  padding: 0 0.3125em 0.4375em;
 }
 
 div {
   &.field, &.actions {
-    margin-bottom: 10px;
+    margin-bottom: 0.625em;
   }
 }
 
@@ -51,30 +51,30 @@ div {
 }
 
 .field_with_errors {
-  padding: 2px;
+  padding: 0.125em;
   background-color: red;
   display: table;
 }
 
 #error_explanation {
-  width: 450px;
-  border: 2px solid red;
-  padding: 7px 7px 0;
-  margin-bottom: 20px;
+  width: 28.125em;
+  border: 0.125em solid red;
+  padding: 0.4375em 0.4375em 0;
+  margin-bottom: 1.25em;
   background-color: #f0f0f0;
 
   h2 {
     text-align: left;
     font-weight: bold;
-    padding: 5px 5px 5px 15px;
-    font-size: 12px;
-    margin: -7px -7px 0;
+    padding: 0.3125em 0.3125em 0.3125em 0.9375em;
+    font-size: 0.75em;
+    margin: -0.4375em -0.4375em 0;
     background-color: #c00;
     color: #fff;
   }
 
   ul li {
-    font-size: 12px;
+    font-size: 0.75em;
     list-style: square;
   }
 }
