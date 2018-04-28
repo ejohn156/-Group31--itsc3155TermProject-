@@ -1,1 +1,41 @@
 <h1>New Progress Update</h1>
+<%= form_for :progress , url: progress_index_path do |f| %>
+  <div class="field">
+  <div class="prev_info"> 
+  <p>Height </p>
+    <%= current_user.height_feet%> ft 
+    <%= current_user.height_inches%> in
+  <p>Previous Weight</p>
+    <%= current_user.weight%>
+    <p>Previous BMI</p>
+    
+   <%= "%.2f" % ((703 * current_user.weight) / ((current_user.height_feet * 12.0 + current_user.height_inches) * (current_user.height_feet * 12.0 + current_user.height_inches)))%> 
+  
+  </p>
+  </div>
+  
+ <p>
+    <%= f.label :date %>
+    <%= f.date_field :date %>
+  </p>
+  <p>
+    <%= f.label :weight %>
+    <%= f.text_field :weight %>
+  </p>
+  
+  <p>
+    <%= f.label "Body Fat Percentage" %>
+    <%= f.text_field :bfp %>
+  </p>
+  
+
+  <p>
+    <p>Current Goals: </p>
+    <%= f.text_area :goals %>
+  </p>
+  </div>
+ </div>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
