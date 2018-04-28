@@ -20,6 +20,11 @@ class ProgressController < ApplicationController
   def show
     @progress = Progress.find(params[:id])
   end
+  def destroy
+    @progress = Progress.find(params[:id])
+    @progress.destroy
+    redirect_to progress_index_path
+  end
 end
 
 
