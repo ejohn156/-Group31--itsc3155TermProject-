@@ -23,23 +23,25 @@
 </p>
 
 <h2>Workout History</h2>
-<% @exercise.steps.each do |step| %>
-  <p>
-    <Strong>Reps:</Strong>
-    <%= step.reps %>
-  </p>
-  
-  <p>
-    <strong>Weight: </strong>
-    <%= step.weight %>
-  </p>
-  
-  <p>
-    <strong>Notes: </strong>
-    <%= step.notes %>
-  </p>
-<% end %>
-
+<table>
+  <thead>
+  <tr>
+    <th>Reps</th>
+    <th>Weight</th>
+    <th>Notes</th>
+    <th colspan="3">
+  </tr>
+    </thead>
+    <tbody id="tableBody">
+      <% @exercise.steps.each do |step| %>
+      <tr>
+    <td><%= step.reps %></td>
+    <td><%= step.weight %></td>
+    <td><%= step.notes %></td>
+  </tr>
+  <% end %>
+</tbody>
+</table>
 <h2>Track your workouts </h2>
 <%= form_for([@exercise, @exercise.steps.build]) do |f| %>
   <p>
