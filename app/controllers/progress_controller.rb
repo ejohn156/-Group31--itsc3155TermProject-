@@ -1,4 +1,7 @@
 class ProgressController < ApplicationController
+  def index
+  @progresses = Progress.all
+  end
   def new
   end
   
@@ -13,6 +16,7 @@ class ProgressController < ApplicationController
     @progress = Progress.find(params[:id])
   end
 end
+
 
 private 
 def progress_params
