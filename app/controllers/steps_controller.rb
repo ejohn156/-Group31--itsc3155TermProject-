@@ -6,7 +6,7 @@ class StepsController < ApplicationController
     end
     
     private 
-        def step_perams
+        def step_params
             params.require(:step).permit(:reps, :weight, :notes)
         end
 end

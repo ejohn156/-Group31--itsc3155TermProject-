@@ -22,6 +22,43 @@
   <%= @exercise.description %>
 </p>
 
+<h2>Workout History</h2>
+<% @exercise.steps.each do |step| %>
+  <p>
+    <Strong>Reps:</Strong>
+    <%= step.reps %>
+  </p>
+  
+  <p>
+    <strong>Weight: </strong>
+    <%= step.weight %>
+  </p>
+  
+  <p>
+    <strong>Notes: </strong>
+    <%= step.notes %>
+  </p>
+<% end %>
+
+<h2>Track your workouts </h2>
+<%= form_for([@exercise, @exercise.steps.build]) do |f| %>
+  <p>
+    <%= f.label :reps %><br>
+    <%= f.text_field :reps %>
+  </p>
+  <p>
+    <%= f.label :weight %><br>
+    <%= f.text_field :weight %>
+  </p>
+  <p>
+    <%= f.label :notes %><br>
+    <%=f.text_area :notes %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
 <%= link_to 'Edit', edit_exercise_path(@exercise) %>
 </div>
 </body>
