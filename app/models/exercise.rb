@@ -1,4 +1,5 @@
 class Exercise < ApplicationRecord
+has_many :steps
 mount_uploader :image, ImageUploader
 validates_processing_of :image
 validate :image_size_validation
