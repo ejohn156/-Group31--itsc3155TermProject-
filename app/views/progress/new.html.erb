@@ -1,5 +1,19 @@
 <h1><%= current_user.username%> Progress Update</h1>
 <%= form_for :progress , url: progress_index_path do |f| %>
+ 
+  <% if @progress.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@progress.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h2>
+      <ul>
+        <% @progress.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
   <div class="field">
     
   <div class="prev_info"> 
@@ -36,3 +50,4 @@
     <%= f.submit %>
   </p>
 <% end %>
+<%= link_to 'Progress', progress_index_path %>
