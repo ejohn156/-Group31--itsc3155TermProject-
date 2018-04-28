@@ -1,3 +1,24 @@
-<h1>This page will include a log of progress updates including the date they were updated/created and information 
-concerning the users fitness info at that time</h1>
+<h1>Progress History</h1>
+ 
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Weight</th>
+    <th>BMI</th>
+    <th>Goal</th>
+  </tr>
+ 
+  <% @progresses.each do |progress| %>
+    <tr>
+      <td><%= progress.date %></td>
+      <td><%= progress.weight %></td>
+      <td><%= progress.bmi %></td>
+      <td><%= progress.goal %></td>
+      <td><%= link_to 'Show', progress_path(progress) %></td>
+      <td><%= link_to 'Destroy', progress_path(progress), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
+
+
 

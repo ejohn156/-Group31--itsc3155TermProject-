@@ -6,12 +6,12 @@
     
     <body>
     <p id="des">
-    Current Weight:
+    Initial Weight:
     <%= current_user.weight%> <br />
-    Current Height:
+    Initial Height:
     <%= current_user.height_feet%> ft 
     <%= current_user.height_inches%> in<br />
-    Current BMI:
+    Initial BMI:
     <%= "%.2f" % ((703 * current_user.weight) / ((current_user.height_feet * 12.0 + current_user.height_inches) * (current_user.height_feet * 12.0 + current_user.height_inches)))%> <br />
     
     </p>

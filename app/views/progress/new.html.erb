@@ -1,0 +1,53 @@
+<h1><%= current_user.username%> Progress Update</h1>
+<%= form_for :progress , url: progress_index_path do |f| %>
+ 
+  <% if @progress.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@progress.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h2>
+      <ul>
+        <% @progress.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    
+  <div class="prev_info"> 
+  <p>Height </p>
+    <%= current_user.height_feet%> ft 
+    <%= current_user.height_inches%> in
+  <p>Initial Weight</p>
+    <%= current_user.weight%>
+    <p>Initial BMI</p>
+    
+   <%= "%.2f" % ((703 * current_user.weight) / ((current_user.height_feet * 12.0 + current_user.height_inches) * (current_user.height_feet * 12.0 + current_user.height_inches)))%> 
+  
+  </p>
+  </div>
+  
+ <p>
+    <%= f.label :date %>
+    <%= f.date_select :date%>
+  </p>
+  <p>
+    <%= f.label :weight %>
+    <%= f.text_field :weight %>
+  </p>
+  
+  <p>
+    <p>Current Goals: </p>
+    <%= f.text_area :goal %>
+  </p>
+  
+  </div>
+ </div>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+<%= link_to 'Progress', progress_index_path %>

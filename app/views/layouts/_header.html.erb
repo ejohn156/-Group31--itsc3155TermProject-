@@ -5,13 +5,15 @@
          <li class="active"><%=link_to "HOME", root_path%></li>
          <li><%=link_to "EXERCISES", exercises_path%></li>
          <li><%=link_to "NEW EXERCISE", new_exercise_path%></li>
-         <li><%=link_to "PROGRESS", progress_index_path%></li>
+         
          <% if current_user %>
-         <li><%= link_to "EDIT ACCOUNT", edit_user_registration_path %></li>
-         <li><%= link_to "LOGOUT", destroy_user_session_path%></li>
+         <li><%=link_to "PROGRESS", progress_index_path%></li>
+         <li><%= link_to 'Update Progress', new_progress_path %></li>
+         <li class="rt"><%= link_to "EDIT ACCOUNT", edit_user_registration_path %></li>
+         <li class="rt"><%= link_to "LOGOUT", destroy_user_session_path%></li>
          <% else %> 
-         <li><%= link_to "LOGIN", new_user_session_path %></li>
-         <li><%= link_to "REGISTER", new_user_registration_path%></li>
+         <li class="rt"><%= link_to "LOGIN", new_user_session_path %></li>
+         <li class="rt"><%= link_to "REGISTER", new_user_registration_path%></li>
         <% end %>
     </ul>
 </div>

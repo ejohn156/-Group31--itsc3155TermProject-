@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   devise_for :users
-  get 'progress/index'
   resources :progress
   resources :exercises do
     resources :steps
