@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+<h1>
+  <%= current_user.username %>
+</h1>
+<body>
+  <div id="form">
+  <p class="showInfo">
+  <strong>Date:</strong>
+    <%= @progress.date %>
+</p>
+<p class="showInfo">
+  <strong>weight:</strong>
+  <%= @progress.weight %>
+</p>
+
+<p class="showInfo">
+  <strong>BMI:</strong>
+  <%=  @progress.bmi %>
+</p>
+
+<p class="showInfo">
+  <strong>Current Goal:</strong>
+  <%= @progress.goal %>
+</p>
+
+</div>
+</body>
