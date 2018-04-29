@@ -21,10 +21,18 @@ ActiveRecord::Schema.define(version: 20180428191118) do
     t.string "created_by"
   end
 
+  create_table "images", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "progresses", force: :cascade do |t|
     t.date "date"
     t.string "weight"
-    t.string "bmi"
+    t.integer "bmi"
     t.text "goal"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
