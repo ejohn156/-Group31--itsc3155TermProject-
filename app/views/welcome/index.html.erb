@@ -6,16 +6,40 @@
     
     <body>
     <p id="des">
-    Initial Weight:
-    <%= current_user.weight%> <br />
-    Initial Height:
+    Current Weight:
+    <%= @current.weight%> <br />
+    Height:
     <%= current_user.height_feet%> ft 
     <%= current_user.height_inches%> in<br />
-    Initial BMI:
-    <%= "%.2f" % ((703 * current_user.weight) / ((current_user.height_feet * 12.0 + current_user.height_inches) * (current_user.height_feet * 12.0 + current_user.height_inches)))%> <br />
+    Current BMI:
+    <%= @current.bmi %> <br />
     
     </p>
-    
+    <h2>
+        Progress
+    </h2>
+    <table>
+  <tr>
+    <th>Date</th>
+    <th>Weight</th>
+    <th>BMI</th>
+    <th>Goal</th>
+  </tr>
+ 
+  <% @progress.each do |progress| %>
+    <tr>
+      <td><%= progress.date %></td>
+      <td><%= progress.weight %></td>
+      <td><%= progress.bmi %></td>
+      <td><%= progress.goal %></td>
+      <td><%= link_to 'Show', progress_path(progress) %></td>
+      <td><%= link_to 'Destroy', progress_path(progress), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
+    <h2>
+        Exercises
+    </h2>
 <table>
   <thead>
     <tr>

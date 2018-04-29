@@ -8,7 +8,7 @@
          
          <% if current_user %>
          <li><%=link_to "PROGRESS", progress_index_path%></li>
-         <li><%= link_to 'Update Progress', new_progress_path %></li>
+         <li><%= link_to 'UPDATE PROGRESS', new_progress_path %></li>
          <li class="rt"><%= link_to "EDIT ACCOUNT", edit_user_registration_path %></li>
          <li class="rt"><%= link_to "LOGOUT", destroy_user_session_path%></li>
          <% else %> 
