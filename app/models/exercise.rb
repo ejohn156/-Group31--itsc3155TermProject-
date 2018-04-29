@@ -1,5 +1,5 @@
 class Exercise < ApplicationRecord
-has_many :steps
+has_many :steps, dependent: :destroy
 mount_uploader :image, ImageUploader
 validates_processing_of :image
 validate :image_size_validation
