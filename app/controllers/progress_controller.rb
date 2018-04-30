@@ -8,7 +8,6 @@ class ProgressController < ApplicationController
   
   def create
     @progress = Progress.new(progress_params)
-    @progress.bmi = "%.2f" % ((703 * @progress.weight.to_i) / ((current_user.height_feet * 12.0 + current_user.height_inches) * (current_user.height_feet * 12.0 + current_user.height_inches)))
     
     if @progress.save
     redirect_to @progress

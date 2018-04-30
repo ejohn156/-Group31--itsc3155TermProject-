@@ -6,15 +6,12 @@
          <li><%=link_to "EXERCISES", exercises_path%></li>
          <li><%=link_to "NEW EXERCISE", new_exercise_path%></li>
          
-         <% if current_user %>
+         
          <li><%=link_to "PROGRESS", progress_index_path%></li>
          <li><%= link_to 'UPDATE PROGRESS', new_progress_path %></li>
-         <li class="rt"><%= link_to "EDIT ACCOUNT", edit_user_registration_path %></li>
-         <li class="rt"><%= link_to "LOGOUT", destroy_user_session_path%></li>
-         <% else %> 
-         <li class="rt"><%= link_to "LOGIN", new_user_session_path %></li>
-         <li class="rt"><%= link_to "REGISTER", new_user_registration_path%></li>
-        <% end %>
+         
+        
+        
     </ul>
 </div>
 

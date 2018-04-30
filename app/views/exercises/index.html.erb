@@ -24,12 +24,11 @@
         <td><%= exercise.name %></td>
         <td><%= exercise.description %></td>
         <td><%= button_to "Show", exercise, :method => "get" %></td>
-        <% if user_signed_in? %>
-          <% if (current_user.username == exercise.created_by) then %>
+        
+        
             <td><%= button_to "Edit", edit_exercise_path(exercise), :method => "get" %></td>
             <td><%= button_to "Delete", exercise, :method => "delete", data: { confirm: 'Are you sure?' } %></td>
-          <% end %>
-        <% end %>
+         
       </tr>
     <% end %>
   </tbody>
