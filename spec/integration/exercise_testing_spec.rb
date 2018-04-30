@@ -46,5 +46,4 @@ feature "Create Step"
         expect(page).to have_content("0")
         expect(page).to have_content("Stuff")
     end
-
 end
